@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HeaderCell" customModule="SmartMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="56"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTa-z6-sx0">
+                        <rect key="frame" x="12" y="0.0" width="134" height="56"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB7-7C-10p">
+                        <rect key="frame" x="146" y="0.0" width="120" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="tsC-3m-lnM"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Show All">
+                            <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="15"/>
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="pressShowAll:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gfs-5K-NWi"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train.side.front.car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="35m-nn-uzD">
+                        <rect key="frame" x="246" y="2.6666666666666643" width="22" height="51"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rB7-7C-10p" secondAttribute="bottom" id="PPp-OV-E2R"/>
+                <constraint firstAttribute="trailing" secondItem="35m-nn-uzD" secondAttribute="trailing" constant="12" id="Qzq-dZ-jNA"/>
+                <constraint firstAttribute="trailing" secondItem="rB7-7C-10p" secondAttribute="trailing" constant="14" id="Tsm-wy-ux0"/>
+                <constraint firstItem="rB7-7C-10p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XfC-FI-0lk"/>
+                <constraint firstAttribute="bottom" secondItem="35m-nn-uzD" secondAttribute="bottom" id="XhH-P3-bND"/>
+                <constraint firstItem="rB7-7C-10p" firstAttribute="leading" secondItem="yTa-z6-sx0" secondAttribute="trailing" id="ee2-QX-REp"/>
+                <constraint firstItem="yTa-z6-sx0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="i0V-Jg-cp0"/>
+                <constraint firstAttribute="bottom" secondItem="yTa-z6-sx0" secondAttribute="bottom" id="itn-IG-a9M"/>
+                <constraint firstItem="35m-nn-uzD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ox8-hc-Vtt"/>
+                <constraint firstItem="yTa-z6-sx0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rtm-s7-MjJ"/>
+                <constraint firstItem="35m-nn-uzD" firstAttribute="leading" secondItem="yTa-z6-sx0" secondAttribute="trailing" constant="100" id="tgn-a8-EXE"/>
+            </constraints>
+            <size key="customSize" width="280" height="56"/>
+            <connections>
+                <outlet property="headerLabel" destination="yTa-z6-sx0" id="oqG-0V-6Ic"/>
+                <outlet property="showAllBtn" destination="rB7-7C-10p" id="wHp-aP-4Gj"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="-9.1549295774647899"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="train.side.front.car" catalog="system" width="128" height="72"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
