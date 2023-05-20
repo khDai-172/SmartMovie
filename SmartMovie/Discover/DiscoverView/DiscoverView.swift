@@ -65,9 +65,14 @@ class DiscoverView: UIViewController {
         underlineView.layer.borderWidth = 0.5
         categorySView.addSubview(underlineView)
         view.bringSubviewToFront(underlineView)
-        underlineView.frame = CGRect(x: 0, y: self.categorySView.frame.height - 2,
+        underlineView.frame = CGRect(x: 0, y: categorySView.frame.height + 2,
                                      width: movieBtn.frame.width, height: 10)
         categorySView.backgroundColor = Color.mainTheme
+        movieBtn.tintColor = Color.blackColor
+        popularBtn.tintColor = Color.blackColor
+        topratedBtn.tintColor = Color.blackColor
+        upcomingBtn.tintColor = Color.blackColor
+        nowPlayingBtn.tintColor = Color.blackColor
     }
 
     @IBAction func pressCategoryBtn(_ sender: UIButton) {
@@ -126,8 +131,8 @@ extension DiscoverView {
     }
 
     func animateUnderlineView(xPoint: CGFloat, widthSize: CGFloat) {
-        UIView.animate(withDuration: 0.13, delay: 0.0, options: .curveLinear, animations: {
-            self.underlineView.frame = CGRect(x: xPoint, y: self.categorySView.frame.height - 2,
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveLinear, animations: {
+            self.underlineView.frame = CGRect(x: xPoint, y: self.categorySView.frame.height + 2,
                                               width: widthSize, height: 10)
         })
     }
